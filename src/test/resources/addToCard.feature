@@ -3,7 +3,7 @@ Feature: adding to cart
   Scenario: Add to cart
 
   Given Navigate to website
-  And Search for "Item"
+  And Search for "Teddy bear"
   And Click on search button
   And Click on any item
   And Fill all the required fields

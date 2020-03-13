@@ -18,7 +18,6 @@ public class addToCartSteps {
     public void navigate_to_website() {
         driver.get( readProperties.getData( "URL" ) );
         driver.manage().window().maximize();
-        
     }
 
     @And("^Search for \"([^\"]*)\"$")

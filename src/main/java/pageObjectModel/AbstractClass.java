@@ -6,6 +6,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.Driver;
 
+import java.util.Random;
+
 public class AbstractClass {
 
 //   create a reusable method for click functionality
@@ -17,6 +19,7 @@ public class AbstractClass {
 
         wait.until( ExpectedConditions.elementToBeClickable( clickButton ) );
         clickButton.click();
+
     }
 
 //   create a reusable method for sendkeys functionality
@@ -25,5 +28,16 @@ public class AbstractClass {
         wait.until( ExpectedConditions.visibilityOf( sendKeysButton ) );
         sendKeysButton.sendKeys( value );
     }
+
+    public int randomNum(int max){
+
+        Random rnd = new Random(  );
+
+        int myRandom = rnd.nextInt(max);
+
+        return myRandom;
+ 
+    }
+
 
 }
