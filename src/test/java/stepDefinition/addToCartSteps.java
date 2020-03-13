@@ -3,23 +3,32 @@ package stepDefinition;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjectModel.homePage;
+import utilities.Driver;
+import utilities.readProperties;
 
 public class addToCartSteps {
 
+    WebDriver driver = Driver.getDriver();
+    homePage homePage = new homePage();
 
     @Given("^Navigate to website$")
     public void navigate_to_website() {
-
+        driver.get( readProperties.getData( "URL" ) );
+        driver.manage().window().maximize();
+        
     }
 
     @And("^Search for \"([^\"]*)\"$")
     public void search_for(String arg1) {
-
+        homePage.writeInSeachButton( arg1 );
     }
 
     @And("^Click on search button$")
     public void click_on_search_button() {
-
+        homePage.clickOnButtonSearch();
     }
 
     @And("^Click on any item$")

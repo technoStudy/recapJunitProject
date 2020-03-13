@@ -13,7 +13,6 @@ public class homePage extends AbstractClass{
         public homePage(){
 
             PageFactory.initElements( driver , this );
-
         }
 
     @FindBy(xpath = "//input[@data-id='search-query']")
