@@ -24,6 +24,9 @@ public class searchPage extends AbstractClass{
     })
     private List<WebElement> products;
 
-
+    public void clickAnyProducts(){
+        clickRandomNum( products );
+        switchWindow();
+    }
 
 }

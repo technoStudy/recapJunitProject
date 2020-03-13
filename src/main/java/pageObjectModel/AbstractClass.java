@@ -6,7 +6,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.Driver;
 
+import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 public class AbstractClass {
 
@@ -36,7 +38,27 @@ public class AbstractClass {
         int myRandom = rnd.nextInt(max);
 
         return myRandom;
- 
+
+    }
+
+    public void clickRandomNum(List<WebElement> listOfElements){
+
+        int rnd = randomNum( listOfElements.size() );
+
+        clickFunctionality( listOfElements.get( rnd ) );
+
+    }
+
+    public void switchWindow(){
+
+       Set<String> windows=  driver.getWindowHandles();
+
+       for(String myWin:windows){
+           driver.switchTo().window( myWin );
+           System.out.println(driver.getCurrentUrl());
+
+       }
+
     }
 
 
