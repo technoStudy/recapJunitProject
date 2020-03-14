@@ -27,6 +27,8 @@ public class itemPage extends AbstractClass {
 
     public void chooseRandomInDropdownList(){
 
+        System.out.println(dropdownList.size());
+
         for(int i = 0 ; i < dropdownList.size() ; i++){
             selectInTheDropdown( dropdownList.get( i ) );
         }
@@ -38,8 +40,18 @@ public class itemPage extends AbstractClass {
     } )
     private List<WebElement> inputList;
 
+    public void typeInInputList(){
+        for(int i =0;i<inputList.size() ; i++) {
+            sendKeysFunctionality( inputList.get( i ), "sadas" );
+        }
+    }
 
+    @FindBy(xpath = "//div[contains(text(),'Add to cart')]")
+    private WebElement buttonAddToCart;
 
+    public void clickOnAddToCart(){
+        clickFunctionality( buttonAddToCart );
+    }
 
 }
 

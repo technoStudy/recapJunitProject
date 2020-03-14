@@ -1,5 +1,6 @@
 package pageObjectModel;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -62,6 +63,14 @@ public class AbstractClass {
 
     }
 
+    public void sleep(int num){
+
+        try {
+            Thread.sleep( num * 1000 );
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
 
     public void selectInTheDropdown(WebElement dropdown){
 
@@ -69,15 +78,19 @@ public class AbstractClass {
 
         List<WebElement> max = select.getOptions();
 
-        int random = randomNum( max.size() );
+        int random = randomNum( max.size()-1 );
 
-        select.selectByIndex( random );
+        select.selectByIndex( random+1 );
+
+        sleep(1);
 
     }
 
-    public void typeInTheInputs(WebElement inputs , String value){
+    public void verifyURL(String expectedResult){
 
-        sendKeysFunctionality( inputs , value );
+        String URL = driver.getCurrentUrl();
+
+        Assert.assertTrue(URL.contains( expectedResult )  );
 
     }
 

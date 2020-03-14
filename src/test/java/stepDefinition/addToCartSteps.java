@@ -6,6 +6,7 @@ import cucumber.api.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjectModel.homePage;
+import pageObjectModel.itemPage;
 import pageObjectModel.searchPage;
 import utilities.Driver;
 import utilities.readProperties;
@@ -15,6 +16,7 @@ public class addToCartSteps {
     WebDriver driver = Driver.getDriver();
     homePage homePage = new homePage();
     searchPage searchPage = new searchPage();
+    itemPage itemPage = new itemPage();
 
     @Given("^Navigate to website$")
     public void navigate_to_website() {
@@ -40,9 +42,8 @@ public class addToCartSteps {
     @And("^Fill all the required fields$")
     public void fill_all_the_required_fields() {
 
-//        get the count of the dropdown and inputs
-
-//        click randomly on dropdown and type random text
+        itemPage.chooseRandomInDropdownList();
+        itemPage.typeInInputList();
 
 //        click on add to cart button
 
@@ -52,12 +53,13 @@ public class addToCartSteps {
 
     @And("^Click on Add to cart button$")
     public void click_on_Add_to_cart_button() {
+        itemPage.clickOnAddToCart();
 
     }
 
     @Then("^Verify I am in the cart page$")
     public void verify_I_am_in_the_cart_page() {
-
+        itemPage.verifyURL( "cart" );
     }
 
 
