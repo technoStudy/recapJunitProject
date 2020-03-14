@@ -29,4 +29,12 @@ public class searchPage extends AbstractClass{
         switchWindow();
     }
 
+    @FindBy(xpath = "//input[@aria-label='$75 to $100']")
+    private WebElement radioButton75to100;
+
+    public void clickOnRadioButton75to100(){
+        clickFunctionality( radioButton75to100 );
+    }
+
+
 }

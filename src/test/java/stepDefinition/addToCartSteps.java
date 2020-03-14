@@ -45,10 +45,6 @@ public class addToCartSteps {
         itemPage.chooseRandomInDropdownList();
         itemPage.typeInInputList();
 
-//        click on add to cart button
-
-//        verify the title
-
     }
 
     @And("^Click on Add to cart button$")
