@@ -121,6 +121,8 @@
                 </configuration>
             </plugin>
 
+       <!--       Defining where is the feature file and step definition     -->
+
             <plugin>
                 <groupId>com.github.temyers</groupId>
                 <artifactId>cucumber-jvm-parallel-plugin</artifactId>
@@ -147,6 +149,7 @@
                 </executions>
             </plugin>
 
+<!--    How many browser you would like to work on -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
@@ -159,7 +162,7 @@
                             <goal>integration-test</goal>
                         </goals>
                         <configuration>
-                            <forkCount>3</forkCount>
+                            <forkCount>10</forkCount>
                             <reuseForks>false</reuseForks>
                             <includes>
                                 <include>**/*IT.class</include>
@@ -169,7 +172,7 @@
                 </executions>
             </plugin>
 
-
+<!--  this is generating the report   -->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -182,10 +185,9 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>AProject</projectName>
-                            <outputDirectory>${project.build.directory}/goutham-cucumber-reports</outputDirectory>
+                            <projectName>EtsyProject</projectName>
+                            <outputDirectory>${project.build.directory}/Detailed-cucumber-reports</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber-parallel</cucumberOutput>
-
                         </configuration>
                     </execution>
                 </executions>
@@ -194,3 +196,6 @@
         </plugins>
     </build>
 </project>
+
+<!--mvn clean-->
+<!--mvn  -Dtest=SomePatternThatDontMatchAnything -DfailIfNoTests=false verify-->
