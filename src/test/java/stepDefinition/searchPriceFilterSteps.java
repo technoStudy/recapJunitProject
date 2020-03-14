@@ -26,7 +26,7 @@ public class searchPriceFilterSteps {
 
     @Then("^Verify all prices are between twenty five to seventy five$")
     public void verify_all_prices_are_between_twenty_five_to_seventy_five() {
-
+        searchPage.verifyBetween25to75();
     }
 
 }

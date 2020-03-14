@@ -54,7 +54,7 @@ public class searchPage extends AbstractClass{
         clickFunctionality( button25to50 );
     }
 
-    public void verifyBetween25to50(){
+    public void verifyBetween25to75(){
 
         betweenNumbers( 25,75, allPrices);
 
