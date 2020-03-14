@@ -44,10 +44,9 @@ public class addToCartSteps {
 
 //        click randomly on dropdown and type random text
 
-//          click on add to cart button
+//        click on add to cart button
 
 //        verify the title
-
 
     }
 
