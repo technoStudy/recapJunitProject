@@ -161,7 +161,7 @@
                             <goal>integration-test</goal>
                         </goals>
                         <configuration>
-                            <forkCount>10</forkCount>
+                            <forkCount>5</forkCount>
                             <reuseForks>false</reuseForks>
                             <includes>
                                 <include>**/*IT.class</include>
