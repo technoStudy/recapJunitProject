@@ -1,5 +1,5 @@
 Feature: adding to cart
-  @SmokeTest
+
   Scenario: Add to cart
 
   Given Navigate to website
@@ -11,6 +11,7 @@ Feature: adding to cart
   Then Verify I am in the cart page
 
 #    to run the code multiple times
+  @SmokeTest
   Scenario Outline:
     Given Navigate to website
     And Search for "<item to search>"

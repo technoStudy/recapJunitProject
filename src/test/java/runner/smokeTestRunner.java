@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         plugin={"html:target/cucumber-report",
-        "json:target/cucumber.json"},
+        "json:target/cucumber.json",
+        "rerun:target/rerun.txt"},
         glue={"stepDefinition"},
         features = {"src/test/resources"},
         tags="@SmokeTest",
