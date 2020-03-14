@@ -1,4 +1,5 @@
 Feature: Search price between 75 to 100
+  @SmokeTest
   Scenario: Search price between 75 to 100
 
   Given Navigate to website

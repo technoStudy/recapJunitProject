@@ -1,5 +1,5 @@
 Feature: adding to cart
-
+  @SmokeTest
   Scenario: Add to cart
 
   Given Navigate to website
@@ -22,7 +22,7 @@ Feature: adding to cart
 
     Examples:
       | item to search |
-      | pillow |
+      | phone accessories |
       | hand sanitiser  |
 
 
