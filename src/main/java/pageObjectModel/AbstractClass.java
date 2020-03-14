@@ -88,6 +88,7 @@ public class AbstractClass {
 
     public void verifyURL(String expectedResult){
 
+        sleep( 3 );
         String URL = driver.getCurrentUrl();
 
         Assert.assertTrue(URL.contains( expectedResult )  );
