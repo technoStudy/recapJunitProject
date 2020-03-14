@@ -2,9 +2,12 @@ package pageObjectModel;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
+
+
 
 public class homePage extends AbstractClass{
 
@@ -32,6 +35,15 @@ public class homePage extends AbstractClass{
     @FindBy(xpath = "//span[contains(text(),'Toys & Entertainment')]")
     private WebElement buttonToysAndEntertainment;
 
+    public void hoverOverOnbuttonToysAndEntertainment(){
+        hoverOver(buttonToysAndEntertainment);
+    }
 
-    
+    @FindBy(xpath = "//a[contains(text(),'Stuffed Animals')]")
+    private WebElement buttonStuffedAnimals;
+
+    public void clickOnButtonStuffedAnimals(){
+        clickFunctionality( buttonStuffedAnimals );
+    }
+
 }
