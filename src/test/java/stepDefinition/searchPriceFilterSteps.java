@@ -21,7 +21,7 @@ public class searchPriceFilterSteps {
 
     @And("^click on price filter twenty five to seventy five$")
     public void click_on_price_filter_twenty_five_to_seventy_five() {
-
+        searchPage.clickOnbutton25to50();
     }
 
     @Then("^Verify all prices are between twenty five to seventy five$")

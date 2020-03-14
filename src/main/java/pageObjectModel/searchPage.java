@@ -39,12 +39,24 @@ public class searchPage extends AbstractClass{
     @FindAll({
             @FindBy(xpath = "//span[contains(@class,'text-body-larger')]/span[@class='currency-value']")
     })
-    private List<WebElement> products75To100;
+    private List<WebElement> allPrices;
 
     public void verifyBetween(){
 
-            betweenNumbers( 75,100, products75To100);
+            betweenNumbers( 75,100, allPrices);
 
     }
 
+    @FindBy(xpath = "(//h3[contains(text(),' Price ($) ')]/parent::legend/parent::fieldset//span)[3]")
+    private WebElement button25to50;
+
+    public void clickOnbutton25to50(){
+        clickFunctionality( button25to50 );
+    }
+
+    public void verifyBetween25to50(){
+
+        betweenNumbers( 25,75, allPrices);
+
+    }
 }
