@@ -43,7 +43,7 @@ public class searchPage extends AbstractClass{
 
     public void verifyBetween(){
 
-            betweenNumbers( 75,90, products75To100);
+            betweenNumbers( 75,100, products75To100);
 
     }
 
