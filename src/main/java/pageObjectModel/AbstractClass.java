@@ -94,5 +94,23 @@ public class AbstractClass {
 
     }
 
+//  two numbers and list all the numbers in the list is between two numbers
+    public void betweenNumbers(int min , int max , List<WebElement> priceList){
+
+        for(int i = 0 ; i< priceList.size() ; i++){
+
+            String priceSTR = priceList.get( i ).getText();
+
+            double priceDouble = Double.parseDouble( priceSTR );
+
+            if(min<=priceDouble && priceDouble<=max){
+                Assert.assertTrue( "number is between the range" , true );
+            }else{
+                Assert.fail();
+            }
+
+        }
+
+    }
 
 }

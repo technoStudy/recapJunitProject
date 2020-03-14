@@ -8,5 +8,5 @@ Feature: Search price between 75 to 100
   Then Verify all prices are between seventy five and hundred
 
 
-    
+
 
