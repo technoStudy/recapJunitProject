@@ -25,6 +25,14 @@ public class itemPage extends AbstractClass {
     } )
     private List<WebElement> dropdownList;
 
+    public void chooseRandomInDropdownList(){
+
+        for(int i = 0 ; i < dropdownList.size() ; i++){
+            selectInTheDropdown( dropdownList.get( i ) );
+        }
+
+    }
+
     @FindAll( {
             @FindBy(xpath = "//textarea[@class='wt-textarea']")
     } )

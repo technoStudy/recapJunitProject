@@ -3,6 +3,7 @@ package pageObjectModel;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.Driver;
 
@@ -58,6 +59,25 @@ public class AbstractClass {
            System.out.println(driver.getCurrentUrl());
 
        }
+
+    }
+
+
+    public void selectInTheDropdown(WebElement dropdown){
+
+        Select select = new Select( dropdown );
+
+        List<WebElement> max = select.getOptions();
+
+        int random = randomNum( max.size() );
+
+        select.selectByIndex( random );
+
+    }
+
+    public void typeInTheInputs(WebElement inputs , String value){
+
+        sendKeysFunctionality( inputs , value );
 
     }
 
