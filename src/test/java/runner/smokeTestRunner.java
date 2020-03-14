@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
 
         plugin={"html:target/cucumber-report",
         "json:target/cucumber.json",
-        "rerun:target/rerun.txt"},
+        "rer un:target/rerun.txt"},
+
         glue={"stepDefinition"},
         features = {"src/test/resources"},
         tags="@SmokeTest",

@@ -122,7 +122,6 @@
             </plugin>
 
        <!--       Defining where is the feature file and step definition     -->
-
             <plugin>
                 <groupId>com.github.temyers</groupId>
                 <artifactId>cucumber-jvm-parallel-plugin</artifactId>
@@ -192,10 +191,10 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 </project>
 
-<!--mvn clean-->
-<!--mvn  -Dtest=SomePatternThatDontMatchAnything -DfailIfNoTests=false verify-->
+        <!--mvn clean-->
+        <!--mvn  -Dtest=SomePatternThatDontMatchAnything -DfailIfNoTests=false verify-->
+

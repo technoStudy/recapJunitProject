@@ -29,4 +29,9 @@ public class homePage extends AbstractClass{
         clickFunctionality( buttonSearch );
     }
 
+    @FindBy(xpath = "//span[contains(text(),'Toys & Entertainment')]")
+    private WebElement buttonToysAndEntertainment;
+
+
+    
 }
