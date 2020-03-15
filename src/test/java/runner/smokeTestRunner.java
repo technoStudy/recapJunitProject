@@ -4,7 +4,6 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
-
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
@@ -18,6 +17,7 @@ import org.junit.runner.RunWith;
 
 //      it is checking all the steps are defined or not
         dryRun = false
+
 )
 
 public class smokeTestRunner {
